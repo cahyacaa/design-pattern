@@ -1,6 +1,8 @@
 package singleton
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSingleton(t *testing.T) {
 	t.Run("Singleton With Result OK", func(t *testing.T) {
