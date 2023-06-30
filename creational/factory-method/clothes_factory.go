@@ -1,6 +1,6 @@
 package factory_method
 
-func getClothes(cType ClothesType) ClothesItf[Clothes] {
+func getClothes(cType ClothesType) interface{} {
 	switch cType {
 	case PoloType:
 		return NewPoloShirt()

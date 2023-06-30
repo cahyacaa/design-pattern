@@ -21,23 +21,3 @@ type Clothes struct {
 	Price int64
 	Size  ClothesSize
 }
-
-func (t *Clothes) SetColor(color string) {
-	t.Color = color
-}
-
-func (t *Clothes) SetSize(size ClothesSize) {
-	t.Size = size
-}
-
-func (t *Clothes) SetPrice(price int64) {
-	t.Price = price
-}
-
-func (t *Clothes) GetData() Clothes {
-	return Clothes{
-		Color: t.Color,
-		Price: t.Price,
-		Size:  t.Size,
-	}
-}
