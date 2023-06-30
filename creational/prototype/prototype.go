@@ -35,7 +35,7 @@ func (s *ShirtsCache) GetClone(m ShirtColor) (ItemInfoGetter, error) {
 		newItem := *bluePrototype
 		return &newItem, nil
 	default:
-		return nil, errors.New("Shirt model not recognized")
+		return nil, errors.New("shirt model not recognized")
 	}
 }
 
@@ -51,7 +51,7 @@ type Shirt struct {
 }
 
 func (s *Shirt) GetInfo() string {
-	return fmt.Sprintf("Shirt with SKU '%s' and Color id %d that costs %f\n", s.SKU, s.Color, s.Price)
+	return fmt.Sprintf("Shirt with SKU '%s' and Color id %s that costs %f\n", s.SKU, s.Color, s.Price)
 }
 
 var whitePrototype *Shirt = &Shirt{
