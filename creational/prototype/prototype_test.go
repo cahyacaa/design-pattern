@@ -9,6 +9,7 @@ func TestClone(t *testing.T) {
 	}
 
 	item1, err := shirtCache.GetClone(White)
+
 	if err != nil {
 		t.Fatal(err)
 	}

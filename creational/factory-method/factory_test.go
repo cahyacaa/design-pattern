@@ -9,8 +9,8 @@ func TestRunTShirt(t *testing.T) {
 	assert := assert.New(t)
 
 	t.Run("Test Factory Method Pattern", func(t *testing.T) {
-		polo := getClothes(PoloType).(*PoloShirt)
-		shirt := getClothes(TShirtType).(*TShirt)
+		polo := getClothes(PoloType).(ClothesItf[PoloShirt])
+		shirt := getClothes(TShirtType).(ClothesItf[TShirt])
 
 		polo.SetPrice(1000.000)
 		polo.SetColor("blue")
