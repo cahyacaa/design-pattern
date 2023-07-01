@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// reference https://syafdia.medium.com/go-concurrency-pattern-pipeline-635dfae01af1
+
 func BenchmarkWithoutPipelineModule(b *testing.B) {
 	for i := 0; i < 5; i++ {
 		fmt.Println(addComments(sqrt[int, int](square[int, int](multiplyTwo[int, int](i)))))
